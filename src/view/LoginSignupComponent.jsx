@@ -23,12 +23,14 @@ const LoginSignupComponent = () => {
 
     const handleClicLogin =()=> {
         const matchEmail = dataUsers.find(element=>element.email===email)
+        console.log(matchEmail)
         const matchPassword = dataUsers.find(element=>element.password===password)
-        if (matchEmail!==undefined || matchPassword!==undefined ) {
-            setMatchSuccess(true)
+        if (matchEmail===undefined || matchPassword===undefined ) {
+            setMatchSuccess(false)
+            setLoginFailed('user name or password was incorrect')
         }
         else{
-            setLoginFailed('user name or password was incorrect')
+            setMatchSuccess(true)
             }
      }
 
