@@ -13,11 +13,12 @@ const CarouselView = (props) => {
     return (
     <div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item interval={500}>
+        <Carousel.Item interval={1000}>
           <img
             className="d-block w-50"
             src={carImages[0]}
             alt="First slide"
+            style={{height: 300, maxWidth:500, objectFit:'cover'}}
           />
           <Carousel.Caption style={{color:"black", textAlign:"end"}}>
             <h3>First slide label</h3>
@@ -25,11 +26,12 @@ const CarouselView = (props) => {
           </Carousel.Caption>
         </Carousel.Item>
 
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={1000}>
         <img
           className="d-block w-50"
           src={carImages[1]}
           alt="Second slide"
+          style={{height: 300, maxWidth:500, objectFit:'cover'}}
 
         />
 
@@ -38,11 +40,12 @@ const CarouselView = (props) => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={1000}>
         <img
           className="d-block w-50"
           src={carImages[2]}
           alt="Third slide"
+          style={{height: 300, maxWidth:500, objectFit:'cover'}}
 
         />
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -8,10 +8,21 @@ import CarView from './CarView';
 import CarouselView from './CarouselView';
 
 const AllCars = () => {
-    //console.log(dataCars)
+    const [searchCars, setSearchCars] = useState(dataCars);
     const carImages =dataCars.map(element =>element.image)
-    console.log(carImages)
 
+    const handleOnSearch =(e)=>{
+      const newSearch=dataCars.filter((item)=>{
+        const matchItem=item.categorie.toUpperCase()
+        const inputItem=e.target.value.toUpperCase()
+        return matchItem.indexOf(inputItem)>-1
+      })
+      setSearchCars(newSearch)
+    }
+
+    const handleClickSearch =()=>{
+
+    }
 
     return (
         <>
@@ -19,9 +30,9 @@ const AllCars = () => {
         <CarouselView carImages={carImages}/>
         </div>
         <div>
-        <InputGroup className="mb-3">
-        <Button variant="outline-secondary" id="button-addon1">
-          Button
+        <InputGroup onChange={handleOnSearch} className="mb-3">
+        <Button onClick={handleClickSearch} variant="outline-secondary" id="button-addon1">
+          Search car
         </Button>
         <Form.Control
           aria-label="Example text with button addon"
@@ -31,8 +42,9 @@ const AllCars = () => {
         </div>
         <div style={{
             display:'flex',
-            justifyContent:'center'}}>
-        {dataCars.map(
+            flex:'wrap',
+            justifyContent:'space-around'}}>
+        {searchCars.map(
         car=>
         <CarView 
         key={car.id}
