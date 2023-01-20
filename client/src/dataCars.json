@@ -14,7 +14,14 @@
         "description":"description of mercedez is here"
     },
     {
-        "id":3,
+        "id":23,
+        "categorie":"mercedez",
+        "model":"1234",
+        "image":"car2.png",
+        "description":"description of other mercedez is here"
+    },
+    {
+        "id":4,
         "categorie":"BMW",
         "model":"1234",
         "image":"car3.png",
