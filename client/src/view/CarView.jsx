@@ -7,7 +7,7 @@ const CarView = (props) => {
     return (
     <div>
     <Card >
-      <Card.Img variant="top" src={image} style={{ height: '100%', maxWidth:'20em', objectFit: 'cover' }}/>
+      <Card.Img variant="top" src={image} style={{ height: '100%', maxWidth:'20em'}}/>
       <Card.Body>
         <Card.Title>{categorie}</Card.Title>
         <Card.Text>{description}</Card.Text>

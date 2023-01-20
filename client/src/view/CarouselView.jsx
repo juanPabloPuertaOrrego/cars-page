@@ -13,7 +13,7 @@ const CarouselView = (props) => {
     return (
     <div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item interval={1000}>
+        <Carousel.Item interval={1000} >
           <img
             className="d-block w-50"
             src={carImages[0]}
