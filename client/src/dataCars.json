@@ -4,7 +4,7 @@
         "categorie":"alfa romero",
         "model":"1234",
         "image":"car1.png",
-        "description":"description of alfa romero is here"
+        "description":"Juan Pablo Restrepo"
         },
     {
         "id":2,
@@ -15,6 +15,13 @@
     },
     {
         "id":3,
+        "categorie":"mercedez",
+        "model":"1234",
+        "image":"car2.png",
+        "description":"description of mercedez is here"
+    },
+    {
+        "id":4,
         "categorie":"BMW",
         "model":"1234",
         "image":"car3.png",
