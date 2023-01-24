@@ -1,11 +1,11 @@
 import React  from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import LoginSignupComponent from './view/LoginSignupComponent';
+import AuthFormContainer from './Authentication/components/AuthFormContainer';
 
 const App = () => {  
   return (
     <div>
-      <LoginSignupComponent/>
+      <AuthFormContainer/>
     </div>
   )
 

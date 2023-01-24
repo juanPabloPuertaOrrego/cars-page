@@ -10,6 +10,9 @@ import CarouselView from './CarouselView';
 const AllCars = () => {
     const [searchCars, setSearchCars] = useState(dataCars);
     const carImages =dataCars.map(element =>element.image)
+    const carCategorie =dataCars.map(element =>element.categorie)
+    const carDescription =dataCars.map(element =>element.description)
+
 
     const handleOnSearch =(e)=>{
       const newSearch=dataCars.filter((item)=>{
@@ -27,7 +30,11 @@ const AllCars = () => {
     return (
         <>
         <div>
-        <CarouselView carImages={carImages}/>
+        <CarouselView 
+        carImages={carImages}
+        carCategorie={carCategorie}
+        carDescription={carDescription}
+        />
         </div>
         <div>
         <InputGroup onChange={handleOnSearch} className="mb-3">

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 const CarouselView = (props) => {
-  const {carImages} = props
+  const {carImages, carCategorie, carDescription} = props
 
     const [index, setIndex] = useState(0);
 
@@ -21,8 +21,8 @@ const CarouselView = (props) => {
             style={{height: 300, maxWidth:500, objectFit:'cover'}}
           />
           <Carousel.Caption style={{color:"black", textAlign:"end"}}>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>{carCategorie[0]}</h3>
+            <p>{carDescription[0]}</p>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -36,8 +36,8 @@ const CarouselView = (props) => {
         />
 
         <Carousel.Caption style={{color:"black", textAlign:"end"}}>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3>{carCategorie[2]}</h3>
+            <p>{carDescription[2]}</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={1000}>
@@ -50,10 +50,8 @@ const CarouselView = (props) => {
         />
 
         <Carousel.Caption style={{color:"black", textAlign:"end"}}>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+        <h3>{carCategorie[2]}</h3>
+            <p>{carDescription[2]}</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

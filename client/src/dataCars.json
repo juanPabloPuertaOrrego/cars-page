@@ -14,19 +14,11 @@
         "description":"description of mercedez is here"
     },
     {
-<<<<<<< HEAD
         "id":3,
         "categorie":"mercedez",
         "model":"1234",
         "image":"car2.png",
         "description":"description of mercedez is here"
-=======
-        "id":23,
-        "categorie":"mercedez",
-        "model":"1234",
-        "image":"car2.png",
-        "description":"description of other mercedez is here"
->>>>>>> 19296b0c1659ba76722e1d832ec9aaa996036b42
     },
     {
         "id":4,

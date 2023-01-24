@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-const LoginSIgnup = (props) => {
+const AuthFormView = (props) => {
 
   const {email, password, clickLogin} = props
   
@@ -30,6 +30,6 @@ const LoginSIgnup = (props) => {
       );
 }
 
-export default LoginSIgnup;
+export default AuthFormView;
 
 

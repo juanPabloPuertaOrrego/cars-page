@@ -1,12 +1,9 @@
 import React , {useState} from 'react';
-import LoginSIgnup from './LoginSIgnup';
-import dataUsers from '../dataUsers.json'
-import AllCars from './AllCars';
+import dataUsers from '../../dataUsers.json'
+import AuthFormView from './AuthFormView';
+import AllCars from '../../view/AllCars';
 
-
-
-const LoginSignupComponent = () => {
-    
+const AuthFormContainer = () => {   
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -19,9 +16,11 @@ const LoginSignupComponent = () => {
 
     const handleChangePassword =(e)=>{
         setPassword(e.target.value)
+
     }
 
     const handleClicLogin =()=> {
+
         const matchEmail = dataUsers.find(element=>element.email===email)
         console.log(matchEmail)
         const matchPassword = dataUsers.find(element=>element.password===password)
@@ -42,10 +41,11 @@ const LoginSignupComponent = () => {
         
     }
 
+
     if (!matchSuccess) {
             return (
         <>
-            <LoginSIgnup 
+            <AuthFormView
             email={handleChangeEmail}
             password={handleChangePassword}
             clickLogin={handleClicLogin}
@@ -57,4 +57,4 @@ const LoginSignupComponent = () => {
 
 }
 
-export default LoginSignupComponent ;
+export default AuthFormContainer ;
